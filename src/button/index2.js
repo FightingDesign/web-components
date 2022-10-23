@@ -1,4 +1,21 @@
-export class FButton extends HTMLElement {
+// const template = `  <template id="btn_tpl">
+// <slot name="btn-content"></slot>
+// </template>`
+
+const template = document.createElement('template')
+template.setAttribute('id', 'btn_tpl')
+
+const slot = document.createElement('slot')
+slot.name = 'btn-content'
+
+console.log(template)
+console.log(slot)
+
+template.appendChild(slot)
+
+document.body.appendChild(template)
+
+class FButton extends HTMLElement {
   constructor() {
     super()
     // 获取模板内容
@@ -43,3 +60,5 @@ export class FButton extends HTMLElement {
 }
 
 customElements.define('f-button', FButton)
+
+
