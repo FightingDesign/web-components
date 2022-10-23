@@ -6,5 +6,8 @@
   "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^3.1.8"
+  }
 }
