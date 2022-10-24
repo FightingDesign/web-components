@@ -5,7 +5,7 @@ export default (): UserConfigExport => {
   return {
     build: {
       target: 'modules',
-      // minify: true,
+      minify: true,
       emptyOutDir: false,
       outDir: resolve(__dirname, './dist'),
       lib: {
@@ -22,7 +22,7 @@ export default (): UserConfigExport => {
           assetFileNames: '[name].[ext]',
           namespaceToStringTag: true,
           manualChunks: undefined,
-          inlineDynamicImports: false,
+          inlineDynamicImports: false
         }
       }
     }

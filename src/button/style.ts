@@ -3,5 +3,5 @@ export const buttonType = {
   primary: '#2d5af1',
   success: '#52b35e',
   danger: '#ff0200',
-  warning: '#fcc202',
+  warning: '#fcc202'
 } as const

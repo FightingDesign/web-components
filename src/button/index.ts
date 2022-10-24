@@ -1,7 +1,7 @@
 import { buttonType } from './style'
 
 export class FButton extends HTMLElement {
-  constructor() {
+  constructor () {
     super()
 
     // 获取模板内容
