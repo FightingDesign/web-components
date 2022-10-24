@@ -1,4 +1,5 @@
 import { buttonType, buttonSize } from './style'
+import { ChangeColor } from '../_utils'
 import type { ButtonType, ButtonSizeType } from './interface'
 
 export class FButton extends HTMLElement {
@@ -23,6 +24,9 @@ export class FButton extends HTMLElement {
     const attrBold: string | null = this.getAttribute('bold')
     const attrRound: string | null = this.getAttribute('round')
     const attrBlock: string | null = this.getAttribute('block')
+
+    const changeColor: ChangeColor = new ChangeColor(buttonType[attrType])
+
 
     // const classList: string[] = [`f-button__${attrType}`, `f-button__${attrSize}`]
 
@@ -66,7 +70,11 @@ export class FButton extends HTMLElement {
       }
 
       .f-button:hover {
+        background: ${changeColor.getLightColor(0.3)};
+      }
 
+      .f-button:active {
+        background: ${changeColor.getDarkColor(0.3)};
       }
     `
 
