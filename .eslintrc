@@ -1,3 +1,8 @@
 {
-  "extends": "@fighting-design"
+  "extends": "@fighting-design",
+  "rules": {
+    "vue": {
+      "comment-directive": "off"
+    }
+  }
 }

@@ -9,10 +9,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "lib": [
-      "dom",
-      "esnext"
-    ],
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
@@ -25,8 +21,5 @@
       "@types"
     ]
   },
-  "include": [
-    "packages/**/*.ts",
-    "packages/**/*.d.ts"
-  ]
+  "include": []
 }
