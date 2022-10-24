@@ -1,4 +1,6 @@
-# web-components
+# Web Components
+
+⚡ 建立在 Web 标准之上的下一代的 UI 组件库。
 
 ## 💡 什么是 Web Components？
 
