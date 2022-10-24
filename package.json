@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm build && pnpm anywhere",
-    "anywhere": "anywhere -f /index.html -h localhost -p 8888",
+    "anywhere": "anywhere -f ./index.html -h localhost -p 8888",
     "build": "vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
