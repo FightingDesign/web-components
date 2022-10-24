@@ -30,4 +30,9 @@ pnpm dev
 
 ## 🚀 参考资料
 
-- [Web_Components](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)
+- [MDN Web_Components](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)
+- [MDN template](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/template)
+- [MDN slot](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/slot)
+- [fast](https://www.fast.design/docs/integrations/vite)
+- [fast 组件文档](https://explore.fast.design/components/fast-button)
+- [fast Github](https://github.com/microsoft/fast)

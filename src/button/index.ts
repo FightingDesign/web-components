@@ -4,17 +4,17 @@ export class FButton extends HTMLElement {
   constructor() {
     super()
 
-    // 获取模板内容
-    const template: HTMLTemplateElement = document.getElementById('f-button__template') as HTMLTemplateElement
-    const templateContent: DocumentFragment = template.content
-
-    // 影子 dom
+    // 创建影子 dom
     // https://developer.mozilla.org/zh-CN/docs/Web/API/Element/attachShadow
     const shadowRoot: ShadowRoot = this.attachShadow({ mode: 'open' })
-    const button: HTMLButtonElement = document.createElement('button')
 
-    button.appendChild(templateContent.cloneNode(true))
-    button.setAttribute('class', 'f-button')
+    // 创建实际的 button 元素
+    const button: HTMLButtonElement = document.createElement('button')
+    button.className = 'f-button'
+    // 给 button 组件添加插槽
+    const slot: HTMLSlotElement = document.createElement('slot')
+    button.appendChild(slot)
+
 
     const type: string = this.getAttribute('type') || 'default'
     const color: string = type === 'default' ? '#333' : '#fff'
@@ -47,6 +47,8 @@ export class FButton extends HTMLElement {
         color: ${color};
       }
     `
+
+    // 把样式和组件添加到影子 dom 中
     shadowRoot.appendChild(style)
     shadowRoot.appendChild(button)
   }
