@@ -14,8 +14,6 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
     "@fighting-design/eslint-config": "^0.1.1",
     "@types/node": "^18.11.4",
     "commitizen": "^4.2.5",
