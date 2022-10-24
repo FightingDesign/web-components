@@ -9,12 +9,22 @@
 
 <body>
   <f-button type="default">默认按钮</f-button>
-  <f-button type="primary">主要按钮</f-button>
-  <f-button type="success">成功按钮</f-button>
+  <f-button type="primary" disabled="true">主要按钮</f-button>
+  <f-button type="success" id="aaa">成功按钮</f-button>
   <f-button type="danger">危险按钮</f-button>
   <f-button type="warning">警告按钮</f-button>
 
   <script src="./dist/index.js?module" type="module"></script>
+  <script>
+    const FButton = document.querySelector('f-button')
+
+    const aaa = document.getElementById('aaa')
+    aaa.addEventListener('click', () => {
+      console.log('点击了')
+    })
+
+    console.log(FButton)
+  </script>
 </body>
 
 </html>
