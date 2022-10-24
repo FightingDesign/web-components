@@ -10,19 +10,12 @@ export default (): UserConfigExport => {
       outDir: resolve(__dirname, './dist'),
       lib: {
         entry: resolve(__dirname, 'src/index.ts'),
-        name: 'FightingWeb'
+        formats: ['es'],
+        fileName: () => 'index.js'
       },
       rollupOptions: {
         output: {
-          format: 'umd',
-          exports: 'named',
-          sourcemap: false,
-          entryFileNames: 'index.umd.js',
-          chunkFileNames: '[name].js',
-          assetFileNames: '[name].[ext]',
-          namespaceToStringTag: true,
-          manualChunks: undefined,
-          inlineDynamicImports: false
+          preserveModules: true
         }
       }
     }

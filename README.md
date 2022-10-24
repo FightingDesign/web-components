@@ -15,14 +15,12 @@
 ## 🪂 运行
 
 ```shell
-clone git@github.com:FightingDesign/web-component.git
+clone git@github.com:FightingDesign/web-components.git
 
 pnpm i
 
-pnpm build
+pnpm dev
 ```
-
-打开 [index.html](https://github.com/FightingDesign/web-component/blob/master/index.html)
 
 ## 🤟 欢迎加入
 

@@ -1,13 +1,15 @@
 import { buttonType } from './style'
 
 export class FButton extends HTMLElement {
-  constructor () {
+  constructor() {
     super()
 
     // 获取模板内容
     const template: HTMLTemplateElement = document.getElementById('f-button__template') as HTMLTemplateElement
     const templateContent: DocumentFragment = template.content
 
+    // 影子 dom
+    // https://developer.mozilla.org/zh-CN/docs/Web/API/Element/attachShadow
     const shadowRoot: ShadowRoot = this.attachShadow({ mode: 'open' })
     const button: HTMLButtonElement = document.createElement('button')
 
