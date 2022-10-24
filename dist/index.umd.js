@@ -9,7 +9,6 @@
         outline: none;
         user-select: none;
         text-decoration: none;
-        height: $middle;
         transition: 0.3s;
         height: 35px;
         line-height: 1;
