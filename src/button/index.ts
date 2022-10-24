@@ -1,45 +1,51 @@
+import { buttonType } from './style'
+
 export class FButton extends HTMLElement {
   constructor() {
     super()
+
     // 获取模板内容
-    let template = document.getElementById('btn_tpl')
-    let templateContent = template.content
+    const template: HTMLTemplateElement = document.getElementById('f-button__template') as HTMLTemplateElement
+    const templateContent: DocumentFragment = template.content
 
-    const shadowRoot = this.attachShadow({ mode: 'open' })
-    const btn = document.createElement('button')
+    const shadowRoot: ShadowRoot = this.attachShadow({ mode: 'open' })
+    const button: HTMLButtonElement = document.createElement('button')
 
-    btn.appendChild(templateContent.cloneNode(true))
-    btn.setAttribute('class', 'f-button')
+    button.appendChild(templateContent.cloneNode(true))
+    button.setAttribute('class', 'f-button')
 
-    // 定义类型  primary | warning | default
-    const type = {
-      'primary': '#06c',
-      'warning': 'red',
-      'default': '#f0f0f0'
-    }
-    const btnType = this.getAttribute('type') || 'default'
-    const btnColor = btnType === 'default' ? 'pink' : '#fff'
+    const type: string = this.getAttribute('type') || 'default'
+    const color: string = type === 'default' ? '#333' : '#fff'
 
     // 创建样式
-    const style = document.createElement('style')
+    const style: HTMLStyleElement = document.createElement('style')
 
     // 为 shadow Dom 添加样式
     style.textContent = `
       .f-button {
         position: relative;
-        display: inline-block;
-        padding:8px 20px;
-        border-radius: 50px;
-        margin-right: 3px;
-        background-color: ${type[btnType]};
-        color: ${btnColor};
-        box-shadow: inset 0 5px 10px rgba(0,0,0, .3);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        border: none;
+        outline: none;
+        user-select: none;
+        text-decoration: none;
+        height: $middle;
+        transition: 0.3s;
+        line-height: 1;
         cursor: pointer;
+        padding: 0 25px;
+        background: ${buttonType[type]};
+        white-space: nowrap;
+        vertical-align: middle;
+        border-radius: 3px;
+        overflow: hidden;
+        color: ${color};
       }
     `
     shadowRoot.appendChild(style)
-    shadowRoot.appendChild(btn)
+    shadowRoot.appendChild(button)
   }
 }
-
-customElements.define('f-button', FButton)
