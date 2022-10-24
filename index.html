@@ -2,14 +2,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>web-component</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Component</title>
 </head>
 
 <body>
-  <h1>web-component</h1>
+  <f-button type="default">
+    <span slot="f-button__content">
+      默认按钮
+    </span>
+  </f-button>
+
+  <f-button type="primary">
+    <span slot="f-button__content">
+      主要按钮
+    </span>
+  </f-button>
+
+  <f-button type="success">
+    <span slot="f-button__content">
+      成功按钮
+    </span>
+  </f-button>
+
+  <f-button type="danger">
+    <span slot="f-button__content">
+      危险按钮
+    </span>
+  </f-button>
+
+  <f-button type="warning">
+    <span slot="f-button__content">
+      警告按钮
+    </span>
+  </f-button>
+
+
+  <template id="f-button__template">
+    <slot name="f-button__content"></slot>
+  </template>
+
+  <script src="./dist/index.umd.js"></script>
 </body>
 
 </html>
