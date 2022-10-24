@@ -1,4 +1,4 @@
-# web-component
+# web-components
 
 ## 💡 什么是 Web Components？
 
