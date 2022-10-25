@@ -1,0 +1,19 @@
+:host() {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  user-select: none;
+  text-decoration: none;
+  transition: 0.3s;
+  line-height: 1;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  background: blue;
+  height: 35px;
+  border-radius: 2px;
+  display: inline-flex;
+  color: #fff;

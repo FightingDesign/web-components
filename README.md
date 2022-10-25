@@ -30,9 +30,26 @@ pnpm dev
 
 ## 🚀 参考资料
 
+### 文档
+
 - [MDN Web_Components](https://developer.mozilla.org/zh-CN/docs/Web/Web_Components)
 - [MDN template](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/template)
 - [MDN slot](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/slot)
 - [fast](https://www.fast.design/docs/integrations/vite)
 - [fast 组件文档](https://explore.fast.design/components/fast-button)
 - [fast Github](https://github.com/microsoft/fast)
+- [Github web-component](https://github.com/topics/web-component)
+- [:host()](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:host_function)
+
+### 其它库参考
+
+- [carbon-web-components](https://web-components.carbondesignsystem.com/)
+- [shoelace](https://shoelace.style/)
+- [ui5-webcomponents](https://sap.github.io/ui5-webcomponents/)
+- [kor](https://kor-ui.com/introduction/welcome)
+- [wired-elements](https://wiredjs.com/showcase.html)
+- [vscode-webview-elements](https://bendera.github.io/vscode-webview-elements/)
+
+### issues 相关
+
+- [core](https://github.com/vuejs/core/pull/4309)
