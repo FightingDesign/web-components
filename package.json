@@ -17,8 +17,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@fighting-design/web-components": "workspace:*",
     "@fighting-design/eslint-config": "^0.1.1",
+    "@fighting-design/web-components": "workspace:*",
     "@types/node": "^18.11.4",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
@@ -31,5 +31,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "lit": "^2.4.0"
   }
 }

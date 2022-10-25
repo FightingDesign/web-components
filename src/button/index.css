@@ -1,19 +1,17 @@
-:host() {
-  position: relative;
+.f-button {
+  background: transparent;
+  height: inherit;
+  line-height: 1;
+  width: inherit;
+  border: inherit;
+  box-sizing: border-box;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: none;
+  color: inherit;
+  border-radius: inherit;
+  cursor: inherit;
+  font-weight: inherit;
+  font-size: inherit;
   outline: none;
-  user-select: none;
-  text-decoration: none;
-  transition: 0.3s;
-  line-height: 1;
-  cursor: pointer;
-  overflow: hidden;
-  white-space: nowrap;
-  vertical-align: middle;
-  background: blue;
-  height: 35px;
-  border-radius: 2px;
-  display: inline-flex;
-  color: #fff;
+}
