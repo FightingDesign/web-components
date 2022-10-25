@@ -3,7 +3,8 @@
   "private": true,
   "workspaces": [
     "vue",
-    "react"
+    "react",
+    "src"
   ],
   "scripts": {
     "dev": "vite",
@@ -16,6 +17,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@fighting-design/web-components": "workspace:*",
     "@fighting-design/eslint-config": "^0.1.1",
     "@types/node": "^18.11.4",
     "commitizen": "^4.2.5",

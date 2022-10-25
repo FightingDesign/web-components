@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@fighting-design/eslint-config': ^0.1.1
+      '@fighting-design/web-components': workspace:*
       '@types/node': ^18.11.4
       commitizen: ^4.2.5
       cz-conventional-changelog: ^3.3.0
@@ -14,6 +15,7 @@ importers:
       vite: ^3.1.8
     devDependencies:
       '@fighting-design/eslint-config': 0.1.1_wyqvi574yv7oiwfeinomdzmc3m
+      '@fighting-design/web-components': link:src
       '@types/node': 18.11.4
       commitizen: 4.2.5
       cz-conventional-changelog: 3.3.0
@@ -36,6 +38,9 @@ importers:
       '@types/react': 18.0.22
       '@types/react-dom': 18.0.7
       '@vitejs/plugin-react': 2.1.0
+
+  src:
+    specifiers: {}
 
   vue:
     specifiers:
