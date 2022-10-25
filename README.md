@@ -53,3 +53,7 @@ pnpm dev
 ### issues 相关
 
 - [core](https://github.com/vuejs/core/pull/4309)
+
+### 其它文章
+
+- [web components 开发踩坑记](https://blog.csdn.net/xiliuhu/article/details/124615237)
