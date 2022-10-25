@@ -2,11 +2,13 @@
   "name": "web-component",
   "private": true,
   "workspaces": [
-    "start"
+    "vue",
+    "react"
   ],
   "scripts": {
     "dev": "vite",
     "dev:vue": "pnpm -C vue dev",
+    "dev:react": "pnpm -C react dev",
     "build": "vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
