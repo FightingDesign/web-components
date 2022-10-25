@@ -1,17 +1,17 @@
 {
   "name": "web-component",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "start"
+  ],
   "scripts": {
     "dev": "vite",
+    "dev:vue": "pnpm -C vue dev",
     "build": "vite build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "commit": "cz"
   },
-  "keywords": [],
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "@fighting-design/eslint-config": "^0.1.1",

@@ -1,10 +1,14 @@
 import { buttonType, buttonSize } from './style'
-import { ChangeColor } from '../_utils'
+import { ChangeColor, defineProps } from '../_utils'
+import { Props } from './props'
 import type { ButtonType, ButtonSizeType } from './interface'
 
 export class FButton extends HTMLElement {
   constructor() {
     super()
+
+    console.log(Props)
+    const prop = defineProps(this)
 
     // 创建影子 dom
     // https://developer.mozilla.org/zh-CN/docs/Web/API/Element/attachShadow
@@ -17,15 +21,9 @@ export class FButton extends HTMLElement {
     const slot: HTMLSlotElement = document.createElement('slot')
     button.appendChild(slot)
 
-    const attrType: ButtonType = (this.getAttribute('type') || 'default') as ButtonType
-    const attrSize: ButtonSizeType = (this.getAttribute('size') || 'middle') as ButtonSizeType
-    const attrDisabled: string | null = this.getAttribute('disabled')
-    const attrColor: string | null = this.getAttribute('color')
-    const attrBold: string | null = this.getAttribute('bold')
-    const attrRound: string | null = this.getAttribute('round')
-    const attrBlock: string | null = this.getAttribute('block')
+    console.log(prop)
 
-    const changeColor: ChangeColor = new ChangeColor(buttonType[attrType])
+    const changeColor: ChangeColor = new ChangeColor(buttonType[prop.type])
 
     // 创建样式
     const style: HTMLStyleElement = document.createElement('style')
@@ -46,14 +44,14 @@ export class FButton extends HTMLElement {
         overflow: hidden;
         white-space: nowrap;
         vertical-align: middle;
-        background: ${buttonType[attrType]};
-        height: ${buttonSize[attrSize].height};
-        padding: 0 ${buttonSize[attrSize].padding};
-        font-size: ${buttonSize[attrSize].fontSize};
-        font-weight: ${attrBold ? 'bold' : 'normal'};
-        border-radius: ${attrRound ? '30px' : '2px'};
-        display: ${attrBlock ? 'block' : 'inline-flex'};
-        color: ${attrColor || attrType === 'default' ? '#333' : '#fff'};
+        background: ${buttonType[prop.type]};
+        height: ${buttonSize[prop.size || 'middle'].height};
+        padding: 0 ${buttonSize[prop.size || 'middle'].padding};
+        font-size: ${buttonSize[prop.size || 'middle'].fontSize};
+        font-weight: ${prop.bold ? 'bold' : 'normal'};
+        border-radius: ${prop.round ? '30px' : '2px'};
+        display: ${prop.block ? 'block' : 'inline-flex'};
+        color: ${prop.olor || prop.ype === 'default' ? '#333' : '#fff'};
       }
 
       .f-button:hover {
