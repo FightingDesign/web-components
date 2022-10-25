@@ -2,7 +2,6 @@
 // import { ChangeColor, defineProps } from '../_utils'
 // import { Props } from './props'
 // import type { ButtonType, ButtonSizeType } from './interface'
-// import { css, CSSResultGroup, html, nothing, TemplateResult } from 'lit'
 
 export class FButton extends HTMLElement {
   constructor() {
@@ -17,8 +16,19 @@ export class FButton extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' })
 
     // https://github.com/mdn/web-components-examples/blob/main/host-selectors/main.js
+    // https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/nonce
+
+    // 采用样式表
+    // https://developer.mozilla.org/en-US/docs/Web/API/Document/adoptedStyleSheets
+
+    const sheet = new CSSStyleSheet()
+
     shadowRoot.innerHTML = `
-    <style>
+    <button class="f-button">
+    <slot></slot>
+  </button>
+    `
+    const style = `
       :host {  
         justify-content: center;
         align-items: center;
@@ -55,11 +65,12 @@ export class FButton extends HTMLElement {
         font-size: inherit;
         outline: none;
       }
-    </style>
-    <button class="f-button">
-      <slot></slot>
-    </button>
+
     `
+
+    sheet.replaceSync(style);
+    shadowRoot.adoptedStyleSheets = [sheet];
+
   }
 
   connectedCallback() {
