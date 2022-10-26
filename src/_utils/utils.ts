@@ -1,11 +1,23 @@
-export const defineProps = (node) => {
-  const props = {}
+import type { RenderObjInterface } from '../_interface'
 
-  // console.log(node.attributes)
+/**
+ * 渲染 shadow dom 的树形结构标签
+ * @param obj 虚拟 dom
+ * @param node 根元素
+ */
+export const render = (obj: RenderObjInterface, node: ShadowRoot | HTMLElement): void => {
+  const el: HTMLElement = document.createElement(obj.tag)
 
-  Object.values(node.attributes).forEach(item => {
-    props[item.name] = item.value
-  })
+  if (obj.class) {
+    el.className = obj.class
+  }
 
-  return props
+  if (typeof obj.children === 'string') {
+    const text: Text = document.createTextNode(obj.children)
+    el.appendChild(text)
+  } else if (obj.children) {
+    obj.children.forEach((item) => render(item, el))
+  }
+
+  node.appendChild(el)
 }

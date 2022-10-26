@@ -1,5 +1,0 @@
-export type ButtonSizeType = 'large' | 'middle' | 'small' | 'mini'
-
-export type ButtonTargetType = '_blank' | '_self' | '_parent' | '_top'
-
-export type ButtonType = 'default' | 'primary' | 'success' | 'danger' | 'warning'

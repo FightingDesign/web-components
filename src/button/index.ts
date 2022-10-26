@@ -1,12 +1,13 @@
-import { RenderShadow } from '../_utils/render-shadow'
+import { RenderShadow } from '../_utils'
+import type { RenderObjInterface } from '../_interface'
 
 export class FButton extends RenderShadow {
 
-  constructor() {
+  constructor () {
     super()
   }
 
-  css(): string {
+  css (): string {
     return `
     :host {  
       justify-content: center;
@@ -47,11 +48,11 @@ export class FButton extends RenderShadow {
     `
   }
 
-  html(): string {
-    return `
-    <button class="f-button">
-      <slot></slot>
-    </button>
-    `
+  html (): RenderObjInterface | string {
+    return {
+      tag: 'button',
+      class: 'f-button',
+      children: [{ tag: 'slot' }]
+    }
   }
 }

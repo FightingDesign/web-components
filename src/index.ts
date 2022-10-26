@@ -1,6 +1,6 @@
 import { FButton } from './button/index'
 
-const install = () => {
+const install = (): void => {
   customElements.define('f-button', FButton)
 }
 

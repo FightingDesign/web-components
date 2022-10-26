@@ -1,1 +1,1 @@
-export type { ChangeColorInterface } from './change-color'
+export type { RenderObjInterface } from './utils'

@@ -40,6 +40,10 @@ pnpm dev
 - [fast Github](https://github.com/microsoft/fast)
 - [Github web-component](https://github.com/topics/web-component)
 - [:host()](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:host_function)
+- [attachShadow](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/attachShadow)
+- [host-selectors](https://github.com/mdn/web-components-examples/blob/main/host-selectors/main.js)
+- [nonce](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/nonce)
+- [adoptedStyleSheets](ttps://developer.mozilla.org/en-US/docs/Web/API/Document/adoptedStyleSheets)
 
 ### 其它库参考
 
