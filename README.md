@@ -43,7 +43,7 @@ pnpm dev
 - [attachShadow](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/attachShadow)
 - [host-selectors](https://github.com/mdn/web-components-examples/blob/main/host-selectors/main.js)
 - [nonce](https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLElement/nonce)
-- [adoptedStyleSheets](ttps://developer.mozilla.org/en-US/docs/Web/API/Document/adoptedStyleSheets)
+- [adoptedStyleSheets](https://developer.mozilla.org/en-US/docs/Web/API/Document/adoptedStyleSheets)
 
 ### 其它库参考
 
