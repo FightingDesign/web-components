@@ -22,37 +22,19 @@ export class FButton extends RenderShadow {
       overflow: hidden;
       white-space: nowrap;
       vertical-align: middle;
-      background: blue;
+      background: #2d5af1;
+      width: 105px;
       height: 35px;
       border-radius: 2px;
       display: inline-flex;
       color: #fff;
      }
-     .f-button {
-      background: transparent;
-      height: inherit;
-      line-height: 1;
-      width: inherit;
-      border: inherit;
-      box-sizing: border-box;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      color: inherit;
-      border-radius: inherit;
-      cursor: inherit;
-      font-weight: inherit;
-      font-size: inherit;
-      outline: none;
-    }
     `
   }
 
-  html (): RenderObjInterface | string {
+  html (): RenderObjInterface {
     return {
-      tag: 'button',
-      class: 'f-button',
-      children: [{ tag: 'slot' }]
-    }
+      tag: 'slot'
+    } as const
   }
 }

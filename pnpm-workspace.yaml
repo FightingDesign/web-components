@@ -1,4 +1,3 @@
 packages:
-  - 'vue'
   - 'src'
-  - 'react'
+  - 'demos/*'

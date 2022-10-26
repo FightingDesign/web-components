@@ -10,14 +10,8 @@ export class RenderShadow extends HTMLElement {
   setupShadow (): void {
     const shadowRoot: ShadowRoot = this.attachShadow({ mode: 'open' })
     const sheet: CSSStyleSheet = new CSSStyleSheet()
-    const node: string | RenderObjInterface = this.html()
 
-    if (typeof node === 'string') {
-      shadowRoot.innerHTML = this.html() as string
-    } else {
-      render(this.html() as RenderObjInterface, shadowRoot)
-    }
-
+    render(this.html(), shadowRoot)
     sheet.replaceSync(this.css())
     shadowRoot.adoptedStyleSheets = [sheet]
   }
@@ -26,7 +20,7 @@ export class RenderShadow extends HTMLElement {
     throw new Error('必须重写父类 css 方法')
   }
 
-  html (): RenderObjInterface | string {
+  html (): RenderObjInterface {
     throw new Error('必须重写父类 html 方法')
   }
 }
