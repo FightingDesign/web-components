@@ -4,8 +4,13 @@
 
 <template>
   <f-button type="default">默认按钮</f-button>
-  <f-button type="primary" disabled>主要按钮</f-button>
-  <!-- <f-button type="success">成功按钮</f-button>
-  <f-button type="danger">危险按钮</f-button>
-  <f-button type="warning">警告按钮</f-button> -->
+
+  <f-card shadow="always">
+    <div slot="header">
+      <span>这是页头</span>
+    </div>
+
+    <f-button type="primary" disabled>主要按钮</f-button>
+    <p>1212121</p>
+  </f-card>
 </template>

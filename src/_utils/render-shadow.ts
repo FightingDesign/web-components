@@ -1,5 +1,5 @@
 import { render } from './utils'
-import type { RenderObjInterface } from '../_interface'
+import type { DomTreeType } from '../_interface'
 
 export class RenderShadow extends HTMLElement {
   constructor () {
@@ -36,7 +36,7 @@ export class RenderShadow extends HTMLElement {
     throw new Error('必须重写父类 css 方法')
   }
 
-  html (): RenderObjInterface {
+  html (): DomTreeType {
     throw new Error('必须重写父类 html 方法')
   }
 }
