@@ -1,5 +1,5 @@
 import { RenderShadow } from '../_utils'
-import type { RenderObjInterface } from '../_interface'
+import type { DomTreeType } from '../_interface'
 
 export class FCard extends RenderShadow {
 
@@ -14,9 +14,10 @@ export class FCard extends RenderShadow {
     `
   }
 
-  html (): RenderObjInterface {
-    return {
-      tag: 'div'
-    } as const
+  html (): DomTreeType {
+    return [
+      { tag: 'div', children: [{ tag: 'slot', name: 'header' }] },
+      { tag: 'div', children: [{ tag: 'slot' }] }
+    ] as const
   }
 }

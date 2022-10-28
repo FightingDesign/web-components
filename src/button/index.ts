@@ -1,5 +1,5 @@
 import { RenderShadow } from '../_utils'
-import type { RenderObjInterface } from '../_interface'
+import type { DomTreeType } from '../_interface'
 
 export class FButton extends RenderShadow {
 
@@ -32,9 +32,11 @@ export class FButton extends RenderShadow {
     `
   }
 
-  html (): RenderObjInterface {
-    return {
-      tag: 'slot'
-    } as const
+  html (): DomTreeType {
+    return [
+      {
+        tag: 'slot'
+      }
+    ] as const
   }
 }

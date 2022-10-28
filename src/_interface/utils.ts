@@ -1,5 +1,8 @@
-export interface RenderObjInterface {
+export interface DomTreeItemInterface {
   tag: string
   class?: string
-  children?: RenderObjInterface[] | string
+  name?: string
+  children?: DomTreeType | string
 }
+
+export type DomTreeType = readonly DomTreeItemInterface[]

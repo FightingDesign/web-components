@@ -1,1 +1,1 @@
-export type { RenderObjInterface } from './utils'
+export type { DomTreeType, DomTreeItemInterface } from './utils'
