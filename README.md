@@ -61,3 +61,4 @@ pnpm dev
 ### 其它文章
 
 - [web components 开发踩坑记](https://blog.csdn.net/xiliuhu/article/details/124615237)
+- [Web Components 入门实例教程](https://www.ruanyifeng.com/blog/2019/08/web_components.html)
