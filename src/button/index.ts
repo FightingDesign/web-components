@@ -1,13 +1,14 @@
 import { RenderShadow } from '../_utils'
 import type { DomTreeType } from '../_interface'
-
+import { bgColors, color } from './color'
 export class FButton extends RenderShadow {
-
+  props: Record<string, string> = {}
   constructor () {
     super()
   }
 
   css (): string {
+    const { type = 'default' } = this.props
     return `
       :host {  
         justify-content: center;
@@ -22,14 +23,15 @@ export class FButton extends RenderShadow {
         overflow: hidden;
         white-space: nowrap;
         vertical-align: middle;
-        background: #2d5af1;
+        background:  ${bgColors[type]};
         width: 105px;
         height: 35px;
-        border-radius: 2px;
-        display: inline-flex;
-        color: #fff;
+        border-radius: 4px;
+        padding:8px 15px;
+        display: inline - flex;
+        color: ${color[type]};
       }
-    `
+`
   }
 
   html (): DomTreeType {
@@ -39,4 +41,5 @@ export class FButton extends RenderShadow {
       }
     ] as const
   }
+
 }
