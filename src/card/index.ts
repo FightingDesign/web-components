@@ -2,7 +2,6 @@ import { RenderShadow } from '../_utils'
 import type { DomTreeType } from '../_interface'
 
 export class FCard extends RenderShadow {
-
   constructor () {
     super()
   }

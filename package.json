@@ -14,8 +14,8 @@
     "build:react": "pnpm -C demos/react build",
     "preview:vue": "pnpm -C demos/vue preview",
     "preview:react": "pnpm -C demos/react preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --cache",
+    "lint:fix": "pnpm run lint --fix",
     "commit": "cz"
   },
   "license": "MIT",
